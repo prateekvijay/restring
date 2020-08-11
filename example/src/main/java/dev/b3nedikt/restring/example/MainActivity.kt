@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import androidx.appcompat.app.AppCompatDelegate.*
 import androidx.appcompat.widget.ContentFrameLayout
 import dev.b3nedikt.app_locale.AppLocale
 import dev.b3nedikt.reword.Reword
@@ -20,6 +21,14 @@ class MainActivity : BaseActivity() {
         val localeStrings = AppLocale.supportedLocales.map { it.language + " " + it.country }
         val adapter = ArrayAdapter(this,
                 android.R.layout.simple_dropdown_item_1line, localeStrings)
+
+        nightModeToogleButton.setOnClickListener {
+            if (getDefaultNightMode() == MODE_NIGHT_YES) {
+                setDefaultNightMode(MODE_NIGHT_NO)
+            } else {
+                setDefaultNightMode(MODE_NIGHT_YES)
+            }
+        }
 
         spinner.adapter = adapter
     }
