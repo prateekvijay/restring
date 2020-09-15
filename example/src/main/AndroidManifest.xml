@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="dev.b3nedikt.restring.example">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name="dev.b3nedikt.restring.example.SampleApplication"
         android:allowBackup="true"

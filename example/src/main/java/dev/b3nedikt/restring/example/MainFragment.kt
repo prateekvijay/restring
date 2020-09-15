@@ -33,6 +33,9 @@ class MainFragment : BaseFragment() {
         val adapter = ArrayAdapter(requireContext(),
                 android.R.layout.simple_dropdown_item_1line, localeStrings)
 
+        webView.settings.javaScriptEnabled = true
+        webView.loadUrl("https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_select")
+
         spinner.adapter = adapter
     }
 
