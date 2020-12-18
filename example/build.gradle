@@ -35,6 +35,7 @@ dependencies {
     implementation deps.viewPump
     implementation deps.reword
     implementation deps.appLocale
+    implementation deps.material
 }
 repositories {
     mavenCentral()

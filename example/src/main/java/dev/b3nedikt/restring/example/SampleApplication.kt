@@ -17,7 +17,7 @@ class SampleApplication : Application() {
         AppLocale.supportedLocales = listOf(Locale.ENGLISH, Locale.US, LOCALE_AUSTRIAN_GERMAN)
 
         Restring.init(this)
-        Restring.localeProvider = AppLocaleLocaleProvider
+        Restring.locale = Locale.ENGLISH
 
         ViewPump.init(RewordInterceptor)
     }
