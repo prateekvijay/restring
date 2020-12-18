@@ -4,6 +4,7 @@ import android.app.Application
 import dev.b3nedikt.app_locale.AppLocale
 import dev.b3nedikt.restring.Restring
 import dev.b3nedikt.restring.example.Locales.LOCALE_AUSTRIAN_GERMAN
+import dev.b3nedikt.reword.Reword
 import dev.b3nedikt.reword.RewordInterceptor
 import dev.b3nedikt.viewpump.ViewPump
 import java.util.*
@@ -18,6 +19,9 @@ class SampleApplication : Application() {
 
         Restring.init(this)
         Restring.locale = Locale.ENGLISH
+
+        Reword.addViewCreator(ButtonViewCreator())
+        Reword.addViewCreator(CheckedTextViewCreator())
 
         ViewPump.init(RewordInterceptor)
     }
